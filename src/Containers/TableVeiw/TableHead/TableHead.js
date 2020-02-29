@@ -21,7 +21,7 @@ class TableVeiw extends Component {
     setpage = (pageno) => this.setState({pageno : pageno})
 
     handleRow = (id) => {
-        this.props.history.push("/users/" + id)
+        this.props.history.push("/user/" + id)
     }
 
     updateChange = (event) => {
