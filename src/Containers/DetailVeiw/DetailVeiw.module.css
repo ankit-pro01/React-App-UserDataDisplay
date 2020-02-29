@@ -1,0 +1,67 @@
+.DetailVeiw{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+}
+
+.DetailVeiw div{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: lightseagreen;
+}
+
+.DetailVeiw div button{
+    margin-left: 20px;
+    margin-top: 15px;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: lightseagreen;
+    color: blanchedalmond;
+    transition: all 1s ease;
+    border: 1px soild blanchedalmond;
+}
+
+.DetailVeiw div button:hover{
+    width: 120px;
+    height: 50px;
+    background-color: lightseagreen;
+}
+.DetailVeiw h3{
+    margin-top: 40px;
+}
+
+.DetailVeiw table{
+    border-collapse: collapse;
+    width: 80%;
+    border-radius: 10px;
+    margin-top: 110px;
+    margin-left: 130px;
+    background-color: blanchedalmond;
+    text-align: center;
+}
+
+.DetailVeiw table caption{
+   background-color: lightseagreen;
+   padding: 20px;
+   font-size: 25px;
+   text-transform: capitalize;
+}
+
+.DetailVeiw table tr{
+    
+    margin: auto;
+    background-color: blanchedalmond;
+    text-align: center  ;
+}
+
+
+.DetailVeiw table tr:hover{
+    margin: auto;
+    background-color: #e1e1e1;
+    text-align: center  ;
+}

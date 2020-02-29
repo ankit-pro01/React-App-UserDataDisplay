@@ -1,0 +1,97 @@
+.Table {
+    overflow-x: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;    
+}
+.Nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: lightseagreen;
+}
+
+
+.Table input {
+    margin-left:20px ;
+    margin-top:20px ;
+    outline: none;
+    display: flex;
+    border-radius: 20%;
+    width: 50px;
+    height: 35px;
+    background-color: blanchedalmond;
+    transition: all 1s ease;
+}
+
+.Table input:hover{
+    outline: none;
+    display: flex;
+    border-radius: 10px;
+    width: 300px;
+    height: 35px;
+}
+
+
+.Table table{
+    z-index: 300;
+    margin-left:110px;
+    margin-top:100px;
+    border-collapse: collapse;
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    border: 10px soild lightseagreen;
+}
+
+.Table input:hover {
+    font-weight: 500;
+}
+
+.Table table tr, td {
+    height: 70px;
+    border-bottom: 1px solid #ddd;
+  }
+
+.Table th,td {
+    width: 10%;
+    width: 300px;
+  }
+
+.Table th {
+    text-align: center;
+    color:black;
+    background-color: lightseagreen;
+    width: 300px;
+  }
+
+.Table th button{
+    display: inline-block;
+    background: transparent;
+    border:none;    
+    border-radius: 50%;
+  }
+
+  .Table tr {
+    background-color: blanchedalmond;
+    width: 300px;
+    transition: all 1s ease;
+
+  }
+
+
+.Table table thead{
+    height: 80px;
+    font-size: larger;
+    text-align: center;
+
+}
+
+
+.Table tr:hover {
+    cursor: pointer;
+    background-color: rgb(54, 211, 203);
+    color:white;
+}
