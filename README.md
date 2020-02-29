@@ -79,5 +79,6 @@ This is simple component with css  for Loader (UI).
 This is for Table body , or all the list of users max five per rows.
 
 ## Status:
-
-
+Application is Completed.
+Below is the URL link of the Application.
+https://ankit-pro01.github.io/React-App-UserDataDisplay/#/
