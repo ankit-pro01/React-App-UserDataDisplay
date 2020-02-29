@@ -11,22 +11,34 @@
     width: 100%;
     height: 80px;
     background-color: lightseagreen;
+    display: flex;
+    align-items: center;
 }
 
 
 .Table input {
+    z-index: 500;
     margin-left:20px ;
-    margin-top:20px ;
     outline: none;
     display: flex;
     border-radius: 20%;
-    width: 50px;
+    width: 57px;
     height: 35px;
     background-color: blanchedalmond;
     transition: all 1s ease;
 }
 
-.Table input:hover{
+.searchButton{
+  background-color: lightseagreen;
+  border : .5px solid wheat;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left:10px;
+  height: 35px;
+}
+
+.Table input:focus{
     outline: none;
     display: flex;
     border-radius: 10px;
@@ -46,9 +58,6 @@
     border: 10px soild lightseagreen;
 }
 
-.Table input:hover {
-    font-weight: 500;
-}
 
 .Table table tr, td {
     height: 70px;

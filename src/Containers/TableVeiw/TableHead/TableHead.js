@@ -15,10 +15,11 @@ class TableVeiw extends Component {
             searchValue : "",
             pageno : 1,
             error : null,
+            searchIndicator : false
         }
     }
 
-    setpage = (pageno) => this.setState({pageno : pageno})
+    setpage = (pageno) => this.setState({pageno : pageno,searchIndicator: false})
 
     handleRow = (id) => {
         this.props.history.push("/user/" + id)
@@ -28,29 +29,33 @@ class TableVeiw extends Component {
         this.setState({searchValue: event.target.value})
     }
 
+    handleSearch = () => {
+        this.setState({searchIndicator: true});
+
+    }
+
     render() {
         let pages = null;
-        let allData = this.props.error;
+        let allData = this.props.error;        
 
         if(!this.props.error){
-        let filteredList = this.props.usersLists;
-        filteredList = this.props.usersLists.filter(user => {
-            return user.first_name.toLowerCase().includes(this.state.searchValue.toLowerCase())
-        });
-
+        let filteredList = this.props.usersLists.filter(user => {
+            return user.first_name.toLowerCase() === this.state.searchValue.toLowerCase()
+        })
         let currentPage = this.state.pageno;
         const showUserPerPage = 5; 
         let indexOfLastUser = currentPage * showUserPerPage;
         let indexOfFirstUser = indexOfLastUser - 5;
-        let currentUsers =  filteredList.slice(indexOfFirstUser, indexOfLastUser);
+        let currentUsers =  this.props.usersLists.slice(indexOfFirstUser, indexOfLastUser);
+        let mapLists = this.state.searchIndicator ? filteredList : currentUsers
 
-        allData = (currentUsers.map(obj => {
+        allData = (mapLists.map(obj => {
                         return (<Users clicked = {() => this.handleRow(obj.id)} 
                             key= {obj.id} obj= {obj}/>
                     )}
                 ))
         
-        pages = (<Pages paginate = {this.setpage} currentPage = {this.state.pageno} allPages = {this.props.usersLists}/>)
+        pages = (<Pages paginate = {this.setpage} currentPage = {this.state.pageno} allPages = {this.props.usersLists} />)
         }
 
         return(
@@ -58,6 +63,10 @@ class TableVeiw extends Component {
                 <div className = {classes.Nav}>
                     <input placeholder = "search by first name" onChange = {
                     (event) =>this.updateChange(event)} />
+                    <button className = {classes.searchButton} 
+                    disabled = {!this.state.searchValue}
+                    style ={{cursor : this.state.searchValue ? "pointer" : "not-allowed"}}  
+                     onClick = {this.handleSearch}>search</button>
                 </div>
                 <table>
                     <thead> 

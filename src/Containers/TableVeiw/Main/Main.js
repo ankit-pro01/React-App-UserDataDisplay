@@ -30,8 +30,6 @@ class Main extends Component {
     }
 
     ascendingOrder = (event) => {
-        console.log("parent ascending");
-        console.log(event.target.id);
         let list = [...this.state.Users]
         let coloumnFeild = event.target.id;
         switch (coloumnFeild) {
@@ -144,8 +142,6 @@ class Main extends Component {
     }
 
     dscendingOrder = (event) => {
-        console.log("parent ascending");
-        console.log(event.target.id);
         let list = [...this.state.Users]
         let coloumnFeild = event.target.id;
         switch (coloumnFeild) {
